@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STU198514_Testing</title>
+    <style>
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .image-container img {
+            width: calc(33.33% - 10px);
+            margin: 5px;
+            max-width: 300px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80%;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>STU198514</h1>
+    <p>This page contain screenshots evidence of testing the project.</p>
+    
+    <section>
+        <h2>HTML Codes Tester</h2>
+        <div class="image-container">
+            <img src="webtestscreenshots/1Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/1Untitled.png')">
+            <img src="webtestscreenshots/2Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/2Untitled.png')">
+            <img src="webtestscreenshots/3Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/3Untitled.png')">
+            <img src="webtestscreenshots/4Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/4Untitled.png')">
+            <img src="webtestscreenshots/5Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/5Untitled.png')">
+            <img src="webtestscreenshots/6Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/6Untitled.png')">
+            <img src="webtestscreenshots/7Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/7Untitled.png')">
+            <img src="webtestscreenshots/8Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/8Untitled.png')">
+            <img src="webtestscreenshots/9Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/9Untitled.png')">
+            <img src="webtestscreenshots/10Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/10Untitled.png')">
+            <img src="webtestscreenshots/11Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/11Untitled.png')">
+        </div>
+    </section>
+
+    <section>
+        <h2>Devices Tester</h2>
+        <div class="image-container">
+            <img src="webtestscreenshots/12Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/12Untitled.png')">
+            <img src="webtestscreenshots/13Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/13Untitled.png')">
+            <img src="webtestscreenshots/14Untitled.png" alt="TESTED" onclick="openModal('webtestscreenshots/14Untitled.png')">
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
